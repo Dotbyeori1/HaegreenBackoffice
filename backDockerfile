@@ -1,0 +1,5 @@
+# 프로덕션 스테이지
+FROM nginx:stable-alpine
+COPY /backoffice /usr/share/nginx/html
+EXPOSE 3001
+CMD ["nginx", "-g", "daemon off;"]
